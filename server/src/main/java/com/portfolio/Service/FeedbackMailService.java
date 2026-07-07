@@ -1,11 +1,13 @@
 package com.portfolio.Service;
 
-import com.portfolio.Repository.FeedbackRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+
 import com.portfolio.Model.Feedback;
+import com.portfolio.Repository.FeedbackRepository;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
@@ -27,7 +29,7 @@ public class FeedbackMailService {
                 savedFeedback.getMessage()
         );
 
-        mailSender.send(message);
+        // mailSender.send(message);
 
         return savedFeedback;
     }
